@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameSite - Home</title>
+    <style>
+        /* Basic Reset and Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #ffffff;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1a1a1a;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e50914;
+        }
+        .navbar .search {
+            flex: 1;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar .search input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            background-color: #333;
+        }
+        .navbar .nav-links a {
+            color: #999;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar .nav-links a:hover {
+            color: #e50914;
+        }
+        /* Banner */
+        .banner {
+            background-color: #202020;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .banner h1 {
+            font-size: 40px;
+            color: #e50914;
+        }
+        .banner p {
+            color: #e0e0e0;
+        }
+        /* Section Titles */
+        .section-title {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            padding-left: 15px;
+            border-left: 4px solid #e50914;
+        }
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(229, 9, 20, 0.5);
+        }
+        .game-card img {
+            width: 100%;
+            height: auto;
+        }
+        .game-card .game-info {
+            padding: 15px;
+        }
+        .game-card .game-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #e50914;
+        }
+        .game-card .game-info p {
+            color: #ccc;
+            font-size: 14px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #121212;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <span class="logo">GameSite</span>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search for games...">
+        </div>
+        <div class="nav-links">
+            <a href="#popularGames">Popular</a>
+            <a href="#allGames">All Games</a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Welcome to GameSite</h1>
+        <p>Your ultimate portal to endless gaming fun</p>
+    </section>
+
+    <!-- Popular Games Section -->
+    <section id="popularGames">
+        <h2 class="section-title">Popular Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="img/game-placeholder.jpg" alt="Popular Game 1">
+                <div class="game-info">
+                    <h3>Popular Game 1</h3>
+                    <p>Top-rated action game of the year!</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/game-placeholder.jpg" alt="Popular Game 2">
+                <div class="game-info">
+                    <h3>Popular Game 2</h3>
+                    <p>Embark on an epic adventure!</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/game-placeholder.jpg" alt="Popular Game 3">
+                <div class="game-info">
+                    <h3>Popular Game 3</h3>
+                    <p>Experience realistic simulation.</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/game-placeholder.jpg" alt="Popular Game 4">
+                <div class="game-info">
+                    <h3>Popular Game 4</h3>
+                    <p>Strategy and fun combined!</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/game-placeholder.jpg" alt="Popular Game 5">
+                <div class="game-info">
+                    <h3>Popular Game 5</h3>
+                    <p>Compete in real-time battles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Games Section -->
+    <section id="allGames">
+        <h2 class="section-title">All Games</h2>
+        <div class="games-grid" id="allGamesGrid">
+            <!-- All 30 games dynamically generated in JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 GameSite. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Generate 30 placeholders for All Games section
+        const allGamesGrid = document.getElementById('allGamesGrid');
+        for (let i = 1; i <= 30; i++) {
+            const gameCard = document.createElement('div');
+            gameCard.classList.add('game-card');
+            gameCard.innerHTML = `
+                <img src="img/game-placeholder.jpg" alt="Game ${i}">
+                <div class="game-info">
+                    <h3>Game ${i}</h3>
+                    <p>Description for Game ${i}</p>
+                </div>
+            `;
+            allGamesGrid.appendChild(gameCard);
+        }
+
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const filter = this.value.toUpperCase();
+            const games = document.querySelectorAll('.games-grid .game-card');
+
+            games.forEach(function(game) {
+                const title = game.querySelector('.game-info h3').textContent;
+                if (title.toUpperCase().indexOf(filter) > -1) {
+                    game.style.display = "";
+                } else {
+                    game.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
