@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MadeByLucca</title>
+    <title>GameSite - Home</title>
     <style>
         /* Basic Reset and Fonts */
         * {
@@ -12,7 +12,7 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212; /* Dark background */
+            background-color: #1b1b1b;
             color: #ffffff;
         }
         /* Navbar */
@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #1a1a1a;
+            background-color: #2a2a2a;
             padding: 15px 30px;
             position: sticky;
             top: 0;
@@ -29,7 +29,7 @@
         .navbar .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #e50914;
+            color: #1db954;
         }
         .navbar .search {
             flex: 1;
@@ -42,37 +42,32 @@
             border-radius: 5px;
             border: none;
             outline: none;
-            color: #ffffff;
-            background-color: #333;
         }
         .navbar .nav-links a {
-            color: #999;
+            color: #ccc;
             margin-left: 20px;
             text-decoration: none;
             transition: color 0.3s;
         }
         .navbar .nav-links a:hover {
-            color: #e50914;
+            color: #fff;
         }
         /* Banner */
         .banner {
-            background-color: #202020;
+            background-color: #333;
             text-align: center;
             padding: 60px 20px;
         }
         .banner h1 {
             font-size: 40px;
-            color: #e50914;
-        }
-        .banner p {
-            color: #e0e0e0;
+            color: #1db954;
         }
         /* Section Titles */
         .section-title {
             font-size: 28px;
             margin: 40px 0 20px;
             padding-left: 15px;
-            border-left: 4px solid #e50914;
+            border-left: 4px solid #1db954;
         }
         /* Games Grid */
         .games-grid {
@@ -82,7 +77,7 @@
             padding: 20px;
         }
         .game-card {
-            background-color: #1a1a1a;
+            background-color: #2a2a2a;
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -90,7 +85,7 @@
         }
         .game-card:hover {
             transform: scale(1.05);
-            box-shadow: 0px 8px 20px rgba(229, 9, 20, 0.5);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
         }
         .game-card img {
             width: 100%;
@@ -102,25 +97,25 @@
         .game-card .game-info h3 {
             font-size: 18px;
             margin-bottom: 5px;
-            color: #e50914;
+            color: #1db954;
         }
         .game-card .game-info p {
-            color: #ccc;
+            color: #bbb;
             font-size: 14px;
         }
         /* Footer */
         .footer {
-            background-color: #121212;
+            background-color: #1b1b1b;
             text-align: center;
             padding: 20px;
-            color: #777;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <span class="logo">MadeByLucca</span> 
+        <span class="logo">GameSite</span>
         <div class="search">
             <input type="text" id="searchInput" placeholder="Search for games...">
         </div>
@@ -132,8 +127,8 @@
 
     <!-- Banner -->
     <section class="banner">
-        <h1>Welcome to MadeByLucca</h1> 
-        <p>Your ultimate portal unblocked games!</p> 
+        <h1>Welcome to GameSite</h1>
+        <p>Your ultimate portal to endless gaming fun</p>
     </section>
 
     <!-- Popular Games Section -->
@@ -141,38 +136,17 @@
         <h2 class="section-title">Popular Games</h2>
         <div class="games-grid">
             <div class="game-card">
-                <img src="img/game-placeholder.jpg" alt="Popular Game 1">
+                <img src="img/bitlife.jpg" alt="BitLife Game">
                 <div class="game-info">
-                    <h3>Popular Game 1</h3>
-                    <p>Top-rated action game of the year!</p>
+                    <h3>BitLife</h3>
+                    <p>Experience life simulation like never before!</p>
                 </div>
             </div>
             <div class="game-card">
-                <img src="img/game-placeholder.jpg" alt="Popular Game 2">
+                <img src="img/yohoho.io.jfif" alt="Yohoho.io">
                 <div class="game-info">
-                    <h3>Popular Game 2</h3>
-                    <p>Embark on an epic adventure!</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="img/game-placeholder.jpg" alt="Popular Game 3">
-                <div class="game-info">
-                    <h3>Popular Game 3</h3>
-                    <p>Experience realistic simulation.</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="img/game-placeholder.jpg" alt="Popular Game 4">
-                <div class="game-info">
-                    <h3>Popular Game 4</h3>
-                    <p>Strategy and fun combined!</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="img/game-placeholder.jpg" alt="Popular Game 5">
-                <div class="game-info">
-                    <h3>Popular Game 5</h3>
-                    <p>Compete in real-time battles.</p>
+                    <h3>Yohoho.io</h3>
+                    <p>Embark on a pirate adventure!</p>
                 </div>
             </div>
         </div>
@@ -181,40 +155,38 @@
     <!-- All Games Section -->
     <section id="allGames">
         <h2 class="section-title">All Games</h2>
-        <div class="games-grid" id="allGamesGrid">
-            <!-- All 30 games dynamically generated in JavaScript -->
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="img/abandonedgame.jfif" alt="Abandoned Game">
+                <div class="game-info">
+                    <h3>Abandoned</h3>
+                    <p>Get lost in the dark forest.</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/simulationgame.jpg" alt="Simulation Game">
+                <div class="game-info">
+                    <h3>Simulation Game</h3>
+                    <p>Test your management skills!</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        &copy; 2024 MadeByLucca. All rights reserved.
+        &copy; 2024 GameSite. All rights reserved.
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Generate 30 placeholders for All Games section
-        const allGamesGrid = document.getElementById('allGamesGrid');
-        for (let i = 1; i <= 30; i++) {
-            const gameCard = document.createElement('div');
-            gameCard.classList.add('game-card');
-            gameCard.innerHTML = `
-                <img src="img/game-placeholder.jpg" alt="Game ${i}">
-                <div class="game-info">
-                    <h3>Game ${i}</h3>
-                    <p>Description for Game ${i}</p>
-                </div>
-            `;
-            allGamesGrid.appendChild(gameCard);
-        }
-
         // Search Functionality
         document.getElementById('searchInput').addEventListener('keyup', function() {
-            const filter = this.value.toUpperCase();
-            const games = document.querySelectorAll('.games-grid .game-card');
+            var filter = this.value.toUpperCase();
+            var games = document.querySelectorAll('.games-grid .game-card');
 
             games.forEach(function(game) {
-                const title = game.querySelector('.game-info h3').textContent;
+                var title = game.querySelector('.game-info h3').textContent;
                 if (title.toUpperCase().indexOf(filter) > -1) {
                     game.style.display = "";
                 } else {
